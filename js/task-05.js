@@ -2,9 +2,10 @@
 //     подставляет его текущее значение в span#name - output.
 // Если инпут пустой, в спане должна отображаться строка "Anonymous".
 
-const inputName = document.querySelector('#name - input');
-const outputName = document.querySelector('#name-output"');
+const inputName = document.querySelector('#name-input');
+const outputName = document.querySelector('#name-output');
 
-textInput.addEventListener("input", (event) => {
-  output.textContent = event.currentTarget.value;
+inputName.addEventListener("input", (event) => {
+    if (outputName.textContent = event.currentTarget.value);
+        else(outputName.textContent = 'Anonymous');
 });
