@@ -13,51 +13,13 @@ const ingredients = [
   'Condiments',
 ];
 
-// const allIngredientsEl = document.querySelectorAll('ingredients');
+const ingredientsListEl = document.querySelector('#ingredients');
 
-// const titleOfItem = ingredients.reduce((previousValue) => {
-//     const titleOfItemEl = allIngredientsEl.firstElementChild.textContent;
-//     console.log(titleOfItemEl);
-//     return previousValue
-// });
-
-// const total = [2, 7, 3, 14, 6].reduce((previousValue, number) => {
-//   return previousValue + number;
-// }, 0);
-
-// console.log(total); // 32
-
-
-
-
-
-
-// const tweets = [
-//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
-//   { id: "001", likes: 2, tags: ["html", "css"] },
-//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
-//   { id: "003", likes: 8, tags: ["css", "react"] },
-//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
-// ];
-
-// // Пройдем по всем элементам коллекции и добавим значения свойства tags
-// // к аккумулятору, начальное значение которого укажем пустым массивом [].
-// // На каждой итерации пушим в аккумулятор все элементы tweet.tags и возвращаем его.
-// const tags = tweets.reduce((allTags, tweet) => {
-//   allTags.push(...tweet.tags);
-
-//   return allTags;
-// }, []);
-
-// console.log(tags);
-
-// // Наверное сбор тегов не одиночная операция, поэтому напишем функцию
-// // для сбора тегов из коллекции
-// const getTags = tweets =>
-//   tweets.reduce((allTags, tweet) => {
-//     allTags.push(...tweet.tags);
-
-//     return allTags;
-//   }, []);
-
-// console.log(getTags(tweets));
+const itemsOfIngredientsEl = ingredients.map(ingredient => {
+  const ingredientEl = document.createElement('li');
+  ingredientEl.textContent = ingredient;
+  ingredientEl.classList.add('item');
+  return ingredientEl;
+});
+console.log(itemsOfIngredientsEl);
+ingredientsListEl.append(...itemsOfIngredientsEl);
