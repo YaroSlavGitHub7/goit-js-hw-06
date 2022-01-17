@@ -4,9 +4,7 @@
 
 const inputFontEl = document.querySelector('#font-size-control');
 const spanFontEl = document.querySelector('#text');
-
-const inputFont = function (event) {
-    spanFontEl.style.fontSize = `${event.currentTarget.value}px`;
-    console.log(spanFontEl);
+const inputFont = function (ev) {
+    spanFontEl.style.fontSize = `${ev.currentTarget.value}px`;
 };
-
+inputFontEl.addEventListener('input', inputFont);

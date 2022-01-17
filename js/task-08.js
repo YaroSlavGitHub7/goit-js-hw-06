@@ -7,3 +7,9 @@
 // 5.Выведи обьект с введенными данными в консоль и очисти значения полей формы методом reset.
 
 const 
+
+const parent = document.querySelector("#parent");
+
+parent.addEventListener("click", () => {
+  alert("Parent click handler");
+});
